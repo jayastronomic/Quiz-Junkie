@@ -1,4 +1,4 @@
 class Question < ApplicationRecord
     has_many :choices
-    belongs_to :quiz   
+    has_many :quizzes, through: :choices
 end
