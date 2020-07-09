@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 2020_07_08_053414) do
   create_table "choices", force: :cascade do |t|
     t.string "answer"
     t.integer "question_id"
+    t.integer "quiz_id"
   end
 
   create_table "questions", force: :cascade do |t|
     t.string "question_title"
     t.string "correct_answer"
-    t.integer "quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
